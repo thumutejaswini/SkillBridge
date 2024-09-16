@@ -1,0 +1,146 @@
+/* Base styles */
+.service-details-container {
+    background-color: #edf7f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    width: 100%; /* Takes full width of the container */
+}
+
+h1, h3 {
+    text-align: left; /* Align text to the left */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.services-grid {
+    display: flex;
+    flex-direction: column; /* Makes it a single column layout */
+    width: 100%;
+    padding-top: 30px;
+}
+
+.service-box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Full-width box */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row; /* Content arranged horizontally */
+    align-items: center;
+}
+
+.media-section {
+    display: flex;
+    justify-content: flex-start; /* Aligns media side by side */
+    margin-right: 20px;
+    width: 50%; /* Image and video will take half the box width */
+}
+
+.media-column {
+    padding: 0 10px;
+}
+
+.service-image, .service-video {
+    width: 100%; /* Makes the image/video take full width of the media section */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px; /* Space between media and text */
+}
+
+.details-section {
+    width: 50%; /* Text will take half the width of the box */
+    padding-left: 20px;
+}
+
+.service-box h2 {
+    color: #55AD9B;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.btncal {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #55AD9B;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btncal:hover {
+    background-color: #95D2B3;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+
+/* Medium Devices (Tablets, less than 992px wide) */
+@media (max-width: 992px) {
+    .service-box {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start;
+    }
+
+    .media-section, .details-section {
+        width: 100%; /* Full width for both media and text */
+    }
+
+    .service-image, .service-video {
+        width: 100%; /* Full width for images/videos */
+        height: auto; /* Adjust height to preserve aspect ratio */
+        margin-right: 0; /* No margin needed for vertically stacked elements */
+    }
+
+    .details-section {
+        padding-left: 0; /* Remove extra padding for smaller screens */
+    }
+}
+
+/* Small Devices (Mobile, less than 768px wide) */
+@media (max-width: 768px) {
+    .service-details-container {
+        padding: 15px;
+    }
+
+    h1, h3 {
+        font-size: 1.5rem; /* Smaller font sizes */
+    }
+
+    .btncal {
+        padding: 10px 20px; /* Adjust button size */
+        font-size: 0.9rem; /* Slightly smaller button text */
+    }
+}
+
+/* Extra Small Devices (Mobile, less than 576px wide) */
+@media (max-width: 576px) {
+    .service-box {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .service-image, .service-video {
+        height: auto; /* Auto-adjust height for smaller screens */
+    }
+
+    h1, h3 {
+        font-size: 1.2rem; /* Smaller font size for headers */
+    }
+
+    .btncal {
+        padding: 8px 16px; /* Smaller padding for button */
+        font-size: 0.8rem; /* Smaller button text */
+    }
+}

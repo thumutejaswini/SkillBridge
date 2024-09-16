@@ -1,0 +1,250 @@
+/* Full-page dark green background */
+body {
+    background-color: #fafcfc;; /* Dark green for the full page */
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
+   
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: #55AD9B;
+    color: #F19ED2;
+}
+
+.navbar .logo h1 {
+    color: white;
+   
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-links a:hover {
+    background-color: #95D2B3;
+}
+
+.profile {
+    margin-left: 20px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: transparent; /* Keep the container transparent */
+}
+
+.video-card {
+    max-width: 100%;
+    background-color: #D8EFD3; /* Lighter green for the video card background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease, z-index 0.2s ease;
+}
+
+video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-card:hover {
+    z-index: 20;
+    transform: scale(1.12);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #d6f4e5; /* Lightest green on hover */
+}
+
+/* For laptops and tablets */
+@media (min-width: 769px) {
+    .interaction {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #000; /* Black color for buttons */
+        font-weight: bold;
+        transition: color 0.3s ease;
+        margin: 0 10px;
+    }
+
+    .ptag {
+        margin-left: 5px;
+        color: #000; /* Black text for better visibility */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .videos-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+    }
+
+    .video-card {
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        position: relative;
+    }
+
+    video {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .interaction {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    button {
+        font-size: 24px;
+        color: #fff; /* White for better contrast on mobile */
+    }
+
+    .interaction button .ptag {
+        display: none; /* Hide counts for simplicity */
+    }
+}
+
+
+.video-card {
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    background-color: #f9f9f9;
+}
+
+.single-video {
+    margin-bottom: 10px;
+}
+
+.interaction {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.ptag {
+    margin-top: 5px;
+}
+
+.comment-section {
+    margin-top: 10px;
+}
+
+.comment-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.comment-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.submit-comment {
+    background-color:#a3d2c8;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-comment:hover {
+    background-color: #55AD9B;
+}
+
+.comments-list {
+    margin-top: 10px;
+}
+
+.comments-list p {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
